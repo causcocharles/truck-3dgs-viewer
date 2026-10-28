@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b22">
+  <meta name="description" content="Truck · 30,000步3D Gaussian Splatting重建，可交互浏览的研究展示。">
+  <title>TRUCK · 3DGS 场景分享</title>
+  <link rel="stylesheet" href="./vendor/viewer.css"><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="scene" aria-label="可交互的Truck三维高斯场景"></div>
+  <header><a class="brand" href="./"><span class="mark">T</span><span>TRUCK <small>GAUSSIAN STUDY / 01</small></span></a><div class="header-right"><span id="status"><i></i>准备加载</span><button id="info-toggle" aria-expanded="false" aria-controls="info">场景信息</button></div></header>
+  <main id="loading" class="loading">
+    <img src="./poster.jpg" alt="训练模型渲染出的Truck场景" class="poster">
+    <div class="shade"></div>
+    <section class="load-card"><span class="eyebrow">TRAINED IN 3D. EXPLORE IN REAL TIME.</span><h1>不止是一张照片。</h1><p>绕到卡车的另一边，看看 257 万个高斯重建出的场景。</p><button id="load-button" class="primary">进入三维场景 <span>↗</span></button><p class="download-note" id="download-note">完整模型压缩版 · 首次加载约 151 MiB<br>建议使用电脑上的 Chrome / Edge，并开启硬件加速。</p><div id="progress-wrap" hidden><div class="progress-track"><div id="progress-bar"></div></div><p id="progress-text" aria-live="polite">准备下载…</p></div><button id="retry" hidden>重试加载</button><p id="error" role="alert"></p></section>
+    <div class="poster-caption">TRUCK / TANKS & TEMPLES <span>30,000 ITERATIONS</span></div>
+  </main>
+  <aside id="info" hidden><button id="info-close" aria-label="关闭场景信息">×</button><span class="eyebrow">ABOUT THIS RECONSTRUCTION</span><h2>一个场景，一组高斯。</h2><p>使用原始 3DGS 官方早期代码训练的 Truck 场景。网页提供压缩展示副本，保留全部高斯和三阶球谐，不是原始 PLY 的逐字节复制。</p><dl><div><dt>训练步数</dt><dd>30,000</dd></div><div><dt>高斯数量</dt><dd>2,574,495</dd></div><div><dt>测试 PSNR</dt><dd>25.411 dB</dd></div><div><dt>SSIM / LPIPS</dt><dd>0.8822 / 0.1467</dd></div></dl><p class="fine">指标来自原始模型在 32 个测试视角、979 × 546 图像上的评测，未重新评估网页量化副本。网页渲染效果和速度取决于设备。</p><a href="https://github.com/causcocharles/truck-3dgs-viewer" target="_blank" rel="noopener">查看项目与来源 ↗</a></aside>
+  <nav id="tools" hidden aria-label="视角工具"><span class="tool-title">探索视角</span><button class="preset" data-index="0">视角 01</button><button class="preset" data-index="1">视角 02</button><button class="preset" data-index="2">视角 03</button><button id="reset">重置</button><button id="fullscreen">全屏 ↗</button></nav>
+  <div id="hint" hidden>左键拖动旋转 · 右键拖动平移 · 滚轮缩放</div>
+  <script type="module" src="./app.js"></script>
+</body></html>

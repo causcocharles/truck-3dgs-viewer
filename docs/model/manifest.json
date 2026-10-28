@@ -1,0 +1,54 @@
+{
+  "filename": "truck.compressed.ply",
+  "format": "PlayCanvas compressed PLY",
+  "gaussians": 2574495,
+  "shDegree": 3,
+  "bytes": 157770095,
+  "sha256": "1d9ae2fe1c0feec90e422e4601a2707286382fa3caedfc40a619ea7a3819ed0b",
+  "parts": [
+    {
+      "url": "./model/truck-00.bin",
+      "bytes": 33554432,
+      "sha256": "2c11741c9adb474faebdc39051821de47d80f205f9d207d725db87a356a5e9e4"
+    },
+    {
+      "url": "./model/truck-01.bin",
+      "bytes": 33554432,
+      "sha256": "467127d2f49e33ab6812ee3dc01b529022c9db7a163ec3dc970425a4009767cb"
+    },
+    {
+      "url": "./model/truck-02.bin",
+      "bytes": 33554432,
+      "sha256": "cfb8ecf172642d58e23909281b7f27df13f23d779940de64def628fc03bd86ba"
+    },
+    {
+      "url": "./model/truck-03.bin",
+      "bytes": 33554432,
+      "sha256": "9c316c0497307af97ffa89bec0e789bcd50d5275af0978880908051a05fa0e2e"
+    },
+    {
+      "url": "./model/truck-04.bin",
+      "bytes": 23552367,
+      "sha256": "106ab7362aa0d32fef85b3831b4d865bfe5ba89c75675409d7c5893a53d4c39c"
+    }
+  ],
+  "original": {
+    "filename": "point_cloud.ply",
+    "bytes": 638476292,
+    "trainingIterations": 30000
+  },
+  "conversion": {
+    "tool": "@playcanvas/splat-transform",
+    "version": "3.10.3",
+    "operation": "format conversion only; quantized; no pruning or SH-band removal"
+  },
+  "quality": {
+    "note": "Original-model test metrics, not remeasured after web compression",
+    "testViews": 32,
+    "width": 979,
+    "height": 546,
+    "PSNR": 25.41135597229004,
+    "SSIM": 0.8821740746498108,
+    "LPIPS": 0.146658793091774
+  }
+}

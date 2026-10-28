@@ -1,0 +1,11 @@
+{
+  "name": "truck-3dgs-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node scripts/build.mjs"},
+  "dependencies": {
+    "@playcanvas/splat-transform": "3.10.3",
+    "@playcanvas/supersplat-viewer": "1.41.0"
+  }
+}
